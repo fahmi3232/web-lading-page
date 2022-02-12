@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import AboutComp from './Component/AboutComp';
+import FeatureComp from './Component/FeatureComp';
+import HeaderComp from './Component/HeaderComp';
+import Kontak from './Component/Kontak';
+import PresenTaComp from './Component/PresenTaComp';
+import aboutImage from './images/Frame 19.png'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HeaderComp />
+      <FeatureComp />
+      <AboutComp image={aboutImage} title="Comes with all you need daily life" button="Get The App" />
+      <PresenTaComp />
+      <AboutComp image={aboutImage} title="Download and get the app" button="Download" />
+      <Kontak />
     </div>
   );
 }
